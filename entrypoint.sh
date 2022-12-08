@@ -51,7 +51,7 @@ label_when_approved() {
     fi
     
     if [[ "$APPROVALS" == "all" ]]; then
-      $APPROVALS = {#reviews[@]}
+      APPROVALS = {#reviews[@]}
     fi
 
     echo "${approvals}/${APPROVALS} approvals"
