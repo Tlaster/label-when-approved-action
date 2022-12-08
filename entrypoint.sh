@@ -49,6 +49,10 @@ label_when_approved() {
     if [[ "$rState" == "APPROVED" ]]; then
       approvals=$((approvals+1))
     fi
+    
+    if [[ "$APPROVALS" == "all" ]]; then
+      $APPROVALS = length($reviews)
+    fi
 
     echo "${approvals}/${APPROVALS} approvals"
 
