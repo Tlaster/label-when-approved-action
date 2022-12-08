@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Label when approved
-      uses: pullreminders/label-when-approved-action@master
+      uses: Tlaster/label-when-approved-action@master
       env:
         APPROVALS: "2"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -25,7 +25,7 @@ jobs:
 
 ## Demo
 
-<img src="https://github.com/pullreminders/label-when-approved-action/raw/master/docs/images/example.png" width="540">
+<img src="https://github.com/Tlaster/label-when-approved-action/raw/master/docs/images/example.png" width="540">
 
 
 ## License

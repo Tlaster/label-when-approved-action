@@ -6,9 +6,9 @@ LABEL "com.github.actions.icon"="tag"
 LABEL "com.github.actions.color"="gray-dark"
 
 LABEL version="1.0.0"
-LABEL repository="http://github.com/pullreminders/label-when-approved-action"
-LABEL homepage="http://github.com/pullreminders/label-when-approved-action"
-LABEL maintainer="Abi Noda <abi@pullreminders.com>"
+LABEL repository="http://github.com/Tlaster/label-when-approved-action"
+LABEL homepage="http://github.com/Tlaster/label-when-approved-action"
+LABEL maintainer="Tlaster <tlaster@outlook.com>"
 
 RUN apk add --no-cache bash curl jq
 
