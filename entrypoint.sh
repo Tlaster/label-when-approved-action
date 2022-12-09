@@ -41,7 +41,9 @@ label_when_approved() {
   reviews=$(echo "$body" | jq --raw-output '.[] | {state: .state} | @base64')
 
   approvals=0
-
+  if [[ "$APPROVALS" == "all" ]]; then
+    APPROVALS=${#reviews[@]}
+  fi
   for r in $reviews; do
     review="$(echo "$r" | base64 -d)"
     rState=$(echo "$review" | jq --raw-output '.state')
@@ -50,9 +52,7 @@ label_when_approved() {
       approvals=$((approvals+1))
     fi
     
-    if [[ "$APPROVALS" == "all" ]]; then
-      APPROVALS=${#reviews[@]}
-    fi
+
 
     echo "${approvals}/${APPROVALS} approvals"
 
