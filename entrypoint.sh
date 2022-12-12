@@ -56,7 +56,7 @@ label_when_approved() {
 
     echo "${approvals}/${APPROVALS} approvals"
 
-    if [[ "$approvals" -ge "$APPROVALS" ]]; then
+    if [[ "$approvals" -g "$APPROVALS" ]]; then
       echo "Labeling pull request"
 
       curl -sSL \
